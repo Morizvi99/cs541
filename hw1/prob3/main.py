@@ -15,6 +15,8 @@ def featureExtractor(x):  # phi(x)
     phi['entity is ' + entity] = 1
     phi['left is ' + left] = 1
     phi['right is ' + right] = 1
+    for word in entity:
+        phi['entity contains' + word] = 1
     return phi
 
 # Learn a predictor
